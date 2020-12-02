@@ -24,5 +24,6 @@ $(document).ready(function() {
     breweryListPerState = response2.filter(brewery => (brewery.status === "Brewpub" || brewery.status === "Brewery"));
     console.log(breweryListPerState);
     breweryPost(breweryListPerState, stateName2, userDist, '#output', userAddressLatLng);
+    console.log('hi');
   });
 });
