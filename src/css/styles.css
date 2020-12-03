@@ -1246,7 +1246,10 @@ div[value="4"],
   color: white;
   font-size: 100px;
   text-shadow: 5px 5px #007272;
+  list-style-position: inside;
+ 
 }
+
 /*Styling for quiz end*/
 
 .brewery {
