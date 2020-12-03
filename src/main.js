@@ -141,7 +141,7 @@ $(document).ready(function () {
     user.showBeerResult(userColor, userIbu, userClarity, userFlavor, beers);
     $("ul#result").text(`You could try:`); 
     for (let i=0; i<user.beersLiked.length; i++){
-      $("ul#result").append(`<li>${user.beersLiked[i].name} </li>`);
+      $("ul#result").append(`<li>${user.beersLiked[i].name}</li>`);
     }
   });
 });
