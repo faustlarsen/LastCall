@@ -1244,10 +1244,8 @@ div[value="4"],
 #result {
   text-align: center;
   color: white;
-  font-size: 100px;
+  font-size: 70px;
   text-shadow: 5px 5px #007272;
-  list-style-position: inside;
- 
 }
 
 /*Styling for quiz end*/

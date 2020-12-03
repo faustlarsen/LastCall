@@ -29,7 +29,7 @@ export default async function breweryPost(breweryListPerState, stateName2, userD
     console.log(i);
     console.log(breweryResult);
     console.log(breweryListPerState.length);
-    $(selector).text("")
+    $(selector).text("");
     if(i === breweryListPerState.length-1) {
       for (let j = 0; j < breweryResult.length ; j++) { 
         console.log('j' + j);
