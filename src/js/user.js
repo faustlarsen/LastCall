@@ -5,7 +5,6 @@ export default class User {
 
   //method to find beer for user
   showBeerResult(color, ibu, clarity, flavor, beers) {
-
     for (let i = 0; i < beers.beersArray.length; i++) {
       let matching = 0;
       if (color === beers.beersArray[i].color) {
@@ -20,10 +19,10 @@ export default class User {
       if (clarity === beers.beersArray[i].clarity) {
         matching++;
       }
-      
+
       if (matching >= 2) {
         this.beersLiked.push(beers.beersArray[i]);
-      }
+      } 
     }
   }
 }

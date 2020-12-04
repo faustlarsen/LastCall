@@ -119,7 +119,7 @@ $(document).ready(function () {
     const BrownAle = new Beer(5, "Brown Ale", 4, 3, 2, 500);
     const Stout = new Beer(6, "Stout", 5, 2, 2, 600);
     const SourBeer = new Beer(7, "Sour Beer", 7, 1, 2, 700);
-    
+
 
     //id, name, color, ibu, clarity, flavor
     let beers = new Beers();
@@ -130,7 +130,7 @@ $(document).ready(function () {
     beers.addBeers(BrownAle);
     beers.addBeers(Stout);
     beers.addBeers(SourBeer);
-   
+
 
     const userColor = parseInt($("input:radio[name=color]:checked").val());
     const userIbu = parseInt($("input:radio[name=ibu]:checked").val());
@@ -139,9 +139,12 @@ $(document).ready(function () {
 
     let user = new User();
     user.showBeerResult(userColor, userIbu, userClarity, userFlavor, beers);
-    $("ul#result").text(`You could try:`); 
-    for (let i=0; i<user.beersLiked.length; i++){
-      $("ul#result").append(`<li>${user.beersLiked[i].name}</li>`);
-    }
+    
+    if (user.beersLiked.length >= 0) {
+      $("ul#result").text(`You could try:`);
+      for (let i = 0; i < user.beersLiked.length; i++) {
+        $("ul#result").append(`<li>${user.beersLiked[i].name}</li>`);
+      }
+    } else $("#resultError").text('Sorry, we dont have beer to offer. Try again.');
   });
 });
